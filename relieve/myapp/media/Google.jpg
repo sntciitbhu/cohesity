@@ -1,0 +1,269 @@
+telnet 18.205.93.120 1201
+telnet
+ping google.com
+telnet 18.205.93.120 1201
+python
+pip3 install python3
+asudo apt install python3       
+sudo apt install python3       
+python
+python3
+telnet 18.205.93.120 1201
+vim santa.py
+sudo apt install vim
+vim santa.py
+python
+python3
+telnet 18.205.93.120 1203
+sudo apt install john
+sudo apt install john-the-ripper
+zip2jhon
+john
+rar2john
+zip2john
+locate john
+john
+cd /usr/lib/x86_64-linux-gnu/
+ls
+locate john
+cd voices
+cd espeak-ng-data/
+ls
+cd voices/i
+cd voices/
+ls
+cd \!v/
+ls
+./src/john/run/zip2john password.zip > hash.txt
+./src/john/run/zip2john password.zip 
+./src/john/run/john hash.txt 
+./src/john/run/john hash.txt --show
+./src/john/run/zip2john password.zip > hash.txt
+./src/john/run/john hash.txt 
+./src/john/run/john hash.txt --show
+unmount
+umount
+ls
+lusb
+nc moar.ctfcompetition.com 1337
+nc mngmnt-iface.ctfcompetition.com 1337
+shutdown -c
+shutdown -p
+shutdown
+shutdown -h
+shutdown --help
+sudo apt-get install build-essential libssl-dev
+sudo apt-get install yasm libgmp-dev libpcap-dev libnss3-dev libkrb5-dev pkg-config
+mkdir ~/src && cd ~/src
+cd ..
+ls
+cd
+cd Downloads/
+ls
+cd john-1.8.0-jumbo-1/
+ls
+cd ~/src
+ls
+cd ~/src/john/src
+./configure && make -s clean && make -sj4
+ls
+../
+cd ../run/
+ls
+zip2john
+./zip2john 
+pwd
+ping 172.17.10.166
+ls
+chmod 777 xmr-stak 
+ls
+ping google.com
+./xmr-stak 
+ls
+vim pools.txt 
+./xmr-stak 
+./xmr-stak --help
+./xmr-stak 
+python3
+pip install virtualenv
+pip3 install virtualenv
+sudo apt install python3-pip
+sudo apt update
+sudo apt install python3-pip
+sudo apt upgrade
+ping google.com
+sudo apt upgrade
+sudo su
+git clone https://github.com/harishbisht/paytm-django.git
+virtualenv paytm
+sudo apt install virtualenv
+virtualenv paytm
+virtualenv paytm --python=python3
+mkdir paytm
+ls
+rm -rf paytm
+cd paytm-django/
+ls
+virtualenv paytm --python=python3
+ls
+source paytm/bin/activate
+ls
+cd pay
+cd payments/
+ls
+pip3 install -r requirements.txt
+python3 manage.py shell
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+python3 manage.py createsupersuer
+python3 manage.py createsuperuser
+python3 manage.py createsupersuer
+python3 manage.py runserver
+python
+python3 manage.py runserver
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+python3 manage.py shell
+python3 manage.py runserver
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+python3 manage.py startapp cart
+cd ..
+mkdir CanteenShop
+ls
+rmdir CanteenShop/
+django-admin 
+django-admin startproject
+mkdir django-project
+cd django-project/
+django-admin startproject CanteenShop
+ls
+cd CanteenShop/
+ls
+python
+python manage.py startapp cart
+python manage.py startapp orders
+python manage.py startapp shop
+ls
+python manage.py runserver
+django-admin --version
+python manage.py runserver
+pip install Pillow
+python manage.py runserver
+deactivate
+cd ..
+ls
+rmdir hello
+myenv
+virtualenv canteen --python=python3
+pip install Django~=2.0.6
+ls
+source canteen/bin/activate
+pip install Django~=2.0.6
+pip install pycrypto
+pip install pillow
+ls
+cd canteen/
+cd ../CanteenShop/
+ls
+python manage.py runserver
+python manage.py startapp paytm
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+p
+python manage.py runserver
+python manage.py shell
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+python manage.py shell
+python manage.py runserver
+python manage.py shell
+python manage.py runserver
+python manage.py runserver 0.0.0.0:80
+sudo su
+sudo python manage.py runserver 0.0.0.0:80
+sudo su
+sudo python manage.py runserver 0.0.0.0:80
+python manage.py runserver 0.0.0.0
+python manage.py runserver 0.0.0.0:8000
+ls
+cd django-project/
+ls
+cd CanteenShop/
+ls
+cd ..
+source canteen/bin/activate
+cd CanteenShop/
+python
+python manage.py runserver
+ifconfig
+python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
+cd django-project/
+source canteen/bin/activate
+cd CanteenShop/
+python manage.py  runserver 
+ls
+mkdir ChatApplication
+cd ChatApplication/
+ls
+wget http://download.redis.io/releases/redis-5.0.3.tar.gz
+tar xzf redis-5.0.3.tar.gz
+cd redis-5.0.3
+ls
+make
+cd src
+ls
+./redis-cli 
+redis-server
+sudo apt install redis-server
+./redis-cli 
+sudo apt install redis-server
+cd ChatApplication/
+ls
+cd redis-5.0.3/
+ls
+cd src
+ls
+redis-server
+ls
+redis-server
+./redis-server
+vim /proc/sys/net/core/somaxconn
+sudo vim /proc/sys/net/core/somaxconn
+./redis-server
+sudo vim /etc/sysctl.conf 
+sysctl vm.overcommit_memory=1
+sudo sysctl vm.overcommit_memory=1
+sudo echo never > /sys/kernel/mm/transparent_hugepage/enabled
+./redis-server
+reboot
+sudo su
+cd django-project/
+ks
+ls
+source canteen/bin/activate
+cd CanteenShop/
+ls
+python manage.py 
+python manage.py runserver
+python manage.py shell
+python manage.py runserver
+python manage.py rumakemigrations
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+python manage.py shell
+python manage.py runserver
+python manage.py shell
+python manage.py runserver
+wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.12/rabbitmq-server_3.7.12-1_all.deb
+ls
+dpkg -i rabbitmq-server_3.7.12-1_all.deb 
+sudo dpkg -i rabbitmq-server_3.7.12-1_all.deb 
+sudo apt install rabbitmq-server

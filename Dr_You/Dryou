@@ -1,0 +1,29 @@
+This is team scrata du flora du
+This is our elevator pitch
+First...
+How did we get to this idea
+	We all have atleast once faced the problem of going to hospitals and clinics for trivial matters. Also in this competitve world most of us are not able to give enough time to check and keep track of our health while others do not have resouces to do so. In some cases personal experiences are much more effective than normal diagnosis. Lastly some of us do not have motivation to go to a doctor due to negligence indeed creating bigger problems. So to save money and time we thought of creating this website to bring these problems to an end just by a click.
+
+Now the solution that we have devised
+	To explain this i will divide the features in three parts :
+	1. First part focuses on building a pool of valuable real life experiences. In this part people can share this valuable advises and experiences by writing blogs about the same. 		People can filter the articles based on the problems they are suffering from. People can also connect to their social media accounts to share these blogs/posts and notify their 		friends.
+	2. Second part focuses on providing diagnosis and solution to common medical problems using Microsofts medical chat bot. This is a solution to avoid waste of time and resources 	   for trivial problems.
+
+By usign the imformation from the blogs we plan to improve our medical healthcare bot so as to give users accurate and useful information regarding their query 
+	3. Last part focuses on keeping your health record. We 	have added a feature for users to add daily health statistics such as Blood Pressure level, Blood sugar levels and for easy 		analysis we will give the users detailed medical statistics graph. This will help to detect any anomalies and suggest appropriate actions. This will also preserve a medical 	history of the user so as to assist the doctor during regular medical check ups.
+  
+How our site works...
+
+Now coming to the part on how our site works....
+
+Our site is user friendly.
+All the features of our website are listed on the nav bar of our home page.
+The users can easily register and log into our website to access the features.
+Coming to the first feature. The user can choose to write or read the blogs. To write a blog it is essential to be logged in for verification purpose. After adding the blogs we can see that it is added to the list of present blogs. The user can also search for a particular problem or condition.
+
+Next is our health manager feaure. You can enter your health statistics like blood pressure and sugar levels.  Our software will plot a graph of these statistics.
+Last comes our chat feature. This feature is based  on Microsoft's healthcare bot API. This feature gives trusted and relevant healthcare services and information to our users. Without much effort people can get access to relevant healthcare services.
+
+This was a quick walkthrough of our website.
+
+

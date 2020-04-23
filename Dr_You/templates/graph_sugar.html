@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sugar Level
+{% endblock %}
+
+{% block head %}
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"> </script>
+<br><br><br><br><br>
+
+
+
+<style>
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+
+    .dfuck
+    {
+      position: absolute;
+      margin: auto;
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+</style>
+<img class="displayed" src="{{ image }}" alt="Sugar Level graph over time"/>
+
+    <center>
+    <div style="padding-top: 40px" >
+        <p style="font-weight: 20px">Predicted Sugar Levels</p>
+        <canvas id="myChart" width="500" height="400" style="border:1px solid #000000;"></canvas>
+    </div></center>
+
+<center>
+<div style="padding-top: 25px;" >
+    <h1 style="font-size: 15px;" >Enter Your Measured Sugar Level</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form }}
+        <button id="append" type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+{% if not user.is_authenticated %}
+    <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</center>
+    <script>
+        var xs = []
+        var ys = []
+        var bestfit = []
+
+        //Create the model
+        const model = tf.sequential();
+        model.add(tf.layers.dense({units: 16, inputShape: [1],activation:'tanh'}));
+        model.add(tf.layers.dense({units: 32, inputShape: [16],activation:'relu'}));
+        model.add(tf.layers.dense({units: 128, inputShape: [32],activation:'relu'}));
+        model.add(tf.layers.dense({units: 32, inputShape: [128],activation:'relu'}));
+        model.add(tf.layers.dense({units: 1, inputShape: [32]}));
+        model.compile({loss: 'meanSquaredError', optimizer: 'adam'});
+
+            xs={{ x }}
+            ys={{ y }}
+            model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:150}).then(() => {
+                xs.push({{ l }})
+                bestfit = model.predict(tf.tensor(xs, [xs.length, 1])).dataSync(); // create best-fit line from xs data
+                var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+                // Chart data and settings:
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+                    data: {
+                        labels: xs,
+                        datasets: [
+                        {
+                            label: 'Original Data',
+                            data: ys,
+                            borderWidth: 1,
+                        },{
+                            label: 'Best Fit line',
+                            data: bestfit,
+                            borderWidth: 1,
+                            borderColor: '#FF0000',
+                            backgroundColor: 'rgba(1,1,1,0)'
+                        },]
+                    },
+                    options: {
+                responsive: false,
+                        scales: {
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Sugar-Level'
+      }
+    }],
+                            xAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Test-No'
+      }
+    }]
+  }
+            }
+                });
+              });
+
+    </script>
+
+{% endblock %}

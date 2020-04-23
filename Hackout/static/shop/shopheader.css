@@ -1,0 +1,110 @@
+/* header styling */
+
+hr {
+    height: 1px;
+    background: #333; 
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .bg-image{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+header .bg-image h1{
+    font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+header .bg-image h3{
+    font-family: 'Dancing Script', cursive;
+	margin-bottom: 30px;
+}
+
+#main{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#inner-nav {
+    background: #fafafa;
+    color: #333;
+    padding: 10px 5px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#inner-nav ul .nav-item > a{
+    color: #333;
+    font-family: 'Fira Sans', sans-serif;   
+}
+
+#inner-nav .navbar-left .nav-item>.active{
+    border-bottom: 3px solid #163658;
+}
+
+#inner-nav ul li {
+    display: inline-block;
+}
+@media (min-width: 768px){
+    #inner-nav ul{
+        width: auto;
+    }
+    #inner-nav ul li {
+        display: inline-table;
+    }
+}
+
+@media (max-width: 768px){
+    #inner-nav ul{
+        width: 100%;
+    }
+}
+
+#subBtn {
+    background: white;
+    width: 15%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.inp {
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Fira Sans', sans-serif;
+    border: 1px solid #aaaaaa;
+    display: inline;
+}
+
+#param {
+    width: 60%;
+}
+
+#tag {
+    width: 15%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+    color: white;
+}
+
+#form_div{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,16 @@
+#des-para {
+    visibility: visible;
+    animation-name: zoomIn;
+    text-align: center;
+}
+
+.features {
+    color: #676a6c;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.fa-angle-down {
+    font-size: 24px;
+}

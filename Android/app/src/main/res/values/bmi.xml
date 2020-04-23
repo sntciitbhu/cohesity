@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bmi">
+        <item>
+"You are underweight and hence following diet and exercises are prescribed.
+Strength Training
+One of the most important exercises you can do to start gaining weight is lifting weight. You want the weight you
+gain to be muscle, rather than just fat. Increasing your caloric intake alone can help you increase body fat, but
+ what you want is an even distribution of healthy fat and mostly muscle, and weightlifting and other strength
+training exercises can help you achieve this.
+
+Lifting weights is one type of strength training that can help you build muscle mass. You can start a
+weightlifting program for beginners if you've never done it before. If you plan to use dumbbells at home, visit
+a personal trainer first to learn proper form.
+
+At the gym, there is also strength training equipment, such as lat machines. Ask a trainer at the gym to work with you
+on learning proper form on these types of apparatus.
+Diet Considerations:
+If you want to gain weight, you'll need to eat a high-calorie diet without turning to unhealthy fats and sugars.
+ Instead, aim for a variety of healthy foods, adding "good" fats into the mix more often than you may have previously
+ done. Examples of good fats are avocados, nuts, and plant-based oils. Don't go overboard with the fats; a healthy
+ diet includes everything in moderation.
+Develop a reasonable exercise routine that includes both strength training and cardiovascular activities, and
+pair these workouts with a healthy, varied diet. Calculate your ideal weight and then use diet and exercise in
+ order to reach that weight and develop a healthy physique. While it may be tempting, if you are underweight, to
+ forego exercise altogether, your body needs the cardiovascular exercise for overall physical and mental health
+ and the strength training to prevent injuries. All healthy lifestyles include exercise; if you need help getting
+ started, consult your doctor, a personal trainer, and a nutritionist for expert advice."
+</item>
+        <item>
+"Congratulations you are in Normal weight category and to enjoy the good health
+you must follow the following diet and exercises.
+MAKE FRUITS AND VEGETABLES YOUR BEST FRIENDS- Eat fruits and veggies for good health!! ...
+DRINK PLENTY OF WATER AND HERBAL TEAS- Drink enough water and have herbal teas! ...
+STAY AWAY FROM REFINED AND PACKAGED FOODS- ...
+DO NOT FORGET TO EAT A PROTEIN RICH MEAL- ...
+CONSUME A SOUP BOWL BEFORE LUNCH AND DINNER"
+</item>
+        <item>
+"You are Overweight and to lose weight you must follow the following diet
+and exercises.
+Workouts will help you to lose weight, can help you to change the way you feel about yourself, boost your mood, and improve your health.
+Carrying too much excess weight puts you at higher risk for certain diseases, including high blood pressure, heart disease, diabetes, sleep apnea, and
+depression. A program of moderate exercise can help you to reduce your risk of disease. Weight loss, which may happen as a result of exercise, can also
+help to reduce your risk for disease.
+Best Workouts for Obese Adults
+These programs are particularly well suited for larger people who exercise.
+1) Walking
+
+This seems like an obvious choice, but there is a reason that walking tops the list of the best exercise for almost everyone. Walking requires very
+ little equipment and it can be done almost everywhere. Walking is low impact, improves strength and mobility in the lower body, and can be easy, moderate,
+ or vigorous depending on your specific plan.
+Keep in mind, however, that walking isn't for everyone. If you experience knee, back, or hip pain, talk to your healthcare provider. You may be able to
+ work with a physical therapist or exercise professional to address the issue or come up with a better routine for fitness.
+
+
+2) Strength Training
+
+There are many good reasons to start a strength training program. But for an overweight exerciser, there are special benefits.
+
+Strength training can correct postural issues that may arise from carrying extra weight. Strength training can also increase the range of motion in all of
+your joints. Finally, when you build muscle, you boost your metabolism when your body is at rest.
+"
+</item>
+
+        <item>
+"Heavens!! You are obese and you must seriously follow the following diet
+and exercises to lead a healthy life.
+Eat Well
+Calories matter for weight-and some foods make it easier for us to keep our calories in check. Healthy eating is a key to good health as well as maintaining
+a healthy weight. It’s not only what and how much we eat but also, it seems, how we eat that’s important.
+
+What to Eat
+
+Choose minimally processed, whole foods:
+
+Whole grains (whole wheat, steel cut oats, brown rice, quinoa)
+Vegetables (a colorful variety-not potatoes)
+Whole fruits (not fruit juices)
+Nuts, seeds, beans, and other healthful sources of protein (fish and poultry)
+Plant oils (olive and other vegetable oils)
+Drink water or other beverages that are naturally calorie-free.
+
+Limit these foods and drinks:
+
+Sugar-sweetened beverages (soda, fruit drinks, sports drinks)
+Fruit juice (no more than a small amount per day)
+Refined grains(white bread, white rice, white pasta) and sweets
+Potatoes (baked or fried)
+Red meat (beef, pork, lamb) and processed meats (salami, ham, bacon, sausage)
+Other highly processed foods, such as fast food
+A good example of an overall healthy diet is the Harvard School of Public Health’s Healthy Eating Pyramid and Healthy Eating Plate. The Nutrition Source, a
+companion website to The Obesity Prevention Source, also offers a quick guide to choosing healthy drinks, as well as recipes and quick tips for eating right.
+
+
+How Much to Eat
+
+Age, gender, body size, and level of physical activity dictate how many calories you need each day to lose weight or to stay at a healthy weight. With two
+out of three U.S. adults overweight or obese, it’s clear that many of us need to eat fewer calories.
+
+Online calorie-needs calculators are a bit over-generous with their recommendations. And, in practice, it’s hard for people to track the amount of calories
+ they take in each day.
+
+A better approach: Adopt habits that will help you avoid overeating (see below)-and skip some of the high-calorie, low-nutrient foods that are most strongly
+linked to weight gain, such as sugar-sweetened beverages, refined grains, and potatoes.
+
+How to Avoid Overeating
+
+Eat breakfast. While it seems like skipping a meal is an easy way to cut calories, skipping breakfast usually backfires when hunger comes raging back mid-day
+, often leading to overeating.
+Choose small portions and eat slowly. Slowing down at meals and choosing smaller portions can help avoid overeating by giving the brain time to tell the
+stomach when it’s had enough food. Limiting distractions-turning off the television, computer, or smartphone-can also help us focus on the food.
+Eat at home. Fast food, restaurant meals, and other foods prepared away from home tend to have larger portions and be less nutritious than the foods we cook
+for ourselves.
+Eat mindfully. Taking time to think about why you’re actually eating is an easy way to avoid needless calories. Hungry? Make the healthiest food and drink
+ choices possible. Not really hungry? Choose something else to do or have a piece of fruit instead of a full meal. When you do eat, focus all of your senses
+on the food, so that you can truly enjoy what you are eating. More information about mindful eating can be found at The Center for Mindful Eating and the
+website for the book Savor: Mindful Eating, Mindful Life.
+Stay Active"
+</item>
+
+    </string-array>
+</resources>

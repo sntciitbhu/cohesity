@@ -1,0 +1,34 @@
+{% extends 'shop/shopheader.html' %}
+
+{% load static %}
+
+{% block head_2 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/curstock.css' %}">
+{% endblock %}
+
+
+
+{% block body_2 %}
+    <section id='stock-sec'>
+        <h1 class='sec-head'>Current Stock</h1>
+        <hr>
+        <table>
+            <tr>
+                <th>Gen Name</th>
+                <th>Units</th>
+                <th>Price/Unit</th>
+                <th>Batch</th>
+                <th>Mfg. Date</th>
+                <th id='last-th'>Exp. Date</th>
+            </tr>
+            {% for key,value in cur_stock.items %}
+                <tr>
+                    {% for i in value %}
+                    <td class="col{{ forloop.counter }}">{{i}}</td>
+                    {% endfor%}
+                </tr>
+            {% endfor %}
+        </table>
+        <p id='bPara'><a href={% url 'shop:update_stock' %}><button id='upBtn'>Update</button></a></p>
+    </section>
+{% endblock %}

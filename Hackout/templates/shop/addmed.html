@@ -1,0 +1,35 @@
+{% extends 'shop/shopheader.html' %}
+
+{% load static %}
+
+{% block head_2 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/addmed.css' %}">
+{% endblock %}
+
+<!-- context = { 'shop_id':shop_id, 'shop_info':cur_shop_info, 'shop_loc':cur_shop_loc } -->
+
+{% block body_2 %}
+    <section id='addmed-sec'>
+        <h1 class='sec-head'>Medicine Details</h1>
+        <hr>
+        <form action={% url 'shop:add_med' %} method="post">
+            {% csrf_token %}
+            {% for row in keys|slice:':4' %}
+                <p>
+                    <label for="{{row}}">{{ row|title }}</label>
+                    <input type="text" name="{{row}}" id="{{row}}"" value="">
+                </p>
+            {% endfor %}
+            {% for row in keys|slice:'4:' %}
+                <p>
+                    <label for="{{row}}">{{ row|title }}</label>
+                    <input type="date" name="{{row}}" id="{{row}}"" value="">
+                </p>
+            {% endfor %}
+            <p id='bPara'>
+                <input type="submit" value="Update" name='update_button'>
+            </p>
+        </form>
+
+    </section>
+{% endblock %}

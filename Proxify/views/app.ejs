@@ -1,0 +1,45 @@
+<%- include('header') -%>
+<div class="add-student">
+  <form action="/config" method="post">
+    <div class="text-input">
+      <label>Name</label>
+      <input
+        type="text"
+        name="new_student_name"
+        placeholder="Student Name"
+        autocomplete="off"
+        class="txtSearch"
+      />
+    </div>
+    <!--<label>Tokens</label>
+    <input type="text" class="txtSearch" name="tokens" placeholder="Tokens" autocomplete="off" />-->
+    <button id="btnSearch" type="submit" name="button" value="add-student">
+      +
+    </button>
+  </form>
+
+  <div>
+    <form action="/config" method="post">
+      <% for(let i=0;i < students.length;i++){ %>
+      <div class="list-items">
+        <p>
+          <%= students[i].name %> &emsp; <%= " 💰 " + students[i].tokens %>
+          <span id="going"> &emsp; Going to class ?</span>
+        </p>
+        <input type="checkbox" name="to_class" value=<%= students[i]._id %> <%=
+        students[i].to_class[current_class]? "checked" : "" %>>
+      </div>
+      <br />
+      <% } %>
+      <button type="submit" class="fill" name="button" value="generate-proxy">
+        Generate Proxy
+      </button>
+    </form>
+  </div>
+  <form action="/config" method="post">
+    <button type="submit" name="button" value="clear-all" class="fill">
+      Clear all
+    </button>
+  </form>
+</div>
+<%- include('footer') -%>

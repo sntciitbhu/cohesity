@@ -1,0 +1,4 @@
+set foor bar
+get foo
+quit()
+exit

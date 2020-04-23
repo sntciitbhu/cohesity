@@ -1,0 +1,9 @@
+Api 			            path				    endpoint
+
+PAYTM payment gateway ==> '.paytm/'		   'locahost:8000/orders/create'				
+google oauth 2.0 ==>      './myapp'      'localhost:8000/myapp/user_login'
+
+
+paytm payment gateway USERNAME: test
+PASSWORD: test
+Bank: andhra bank

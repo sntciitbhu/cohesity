@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Departments</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="style.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="386445670275-fdce19rfmq07ll61o5n8i415noulm2f2.apps.googleusercontent.com">
+</head>
+
+<body>
+
+    <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-3 col-sm-6 col-4 header-top-left" style="visibility:hidden;">
+						<select class="default-select">
+							<option data-display="English">English</option>
+							<option value="1">Germany</option>
+							<option value="2">Spanish</option>
+						</select>
+					</div>
+					<div class="col-lg-9 col-sm-6 col-8 header-top-right">
+						<a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953
+									012 3654 896</span></span></a>
+						<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@sahyog.com</span></span></a>
+						<a href="appointments.html" class="primary-btn text-uppercase">Appointment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between">
+						<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+						<button type="submit" class="btn"></button>
+						<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+					</form>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+							<li class="nav-item active"><a class="nav-link" href="departments.html">Department</a></li>
+							<li class="nav-item"><a class="nav-link" href="shop.html">Shops</a></li>
+							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+							<li class="nav-item signinbtn"><a class="nav-link" href="signin.html">LOG IN</a></li>
+                            <li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle pcontent" style="display:none;" data-toggle="dropdown" role="button" aria-haspopup="true"
+									 aria-expanded="false"></a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" onclick="signOut();" href="#">SignOut</a></li>
+									</ul>
+								</li>
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item"><a href="#" class="search">
+									<i class="lnr lnr-magnifier" id="search"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay bg-parallax"></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <div class="page_link">
+                        <a href="index.html">Home</a>
+                        <a href="departments.html">Departments</a>
+                    </div>
+                    <h2>Departments</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+	<!--================ Start Department Area =================-->
+	<div class="abc hideme">
+			Sign In with Google
+			<br>
+			<br>
+				<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		</div>
+	<section class="department_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h2>Popular Departments</h2>
+						<p>Doctor categorised for YOUR convenience.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="cardiology.html" target="_blank"><img src="img/department/d-icon1.png" alt=""></a>
+						</div>
+						<h4>Cardiology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="urology.html" target="_blank"><img src="img/department/d-icon2.png" alt=""></a>
+						</div>
+						<h4>Urology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="dental-care.html" target="_blank"><img src="img/department/d-icon3.png" alt=""></a>
+						</div>
+						<h4>Dental Care</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="eye-care.html" target="_blank"><img src="img/department/d-icon4.png" alt=""></a>
+						</div>
+						<h4>Eye Care</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="neurology.html" target="_blank"><img src="img/department/d-icon5.png" alt=""></a>
+						</div>
+						<h4>Neurology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<a href="plastic-surgery.html" target="_blank"><img src="img/department/d-icon6.png" alt=""></a>
+						</div>
+						<h4>Plastic Surgery</h4>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</section>
+	<!--================ End Department Area =================-->
+
+	
+
+	
+	<!--================ Start Features Area =================-->
+	<section class="features_area section_gap">
+		<div class="container">
+			<div class="row">
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="img/features/icon1.png" alt="">
+							<h4>Emergency Services</h4>
+						</div>
+						<div class="feature_content">
+							<p>We have emergency services that are available on site for you.</p>
+							<div class="feature_btn">
+								<a href="#" class="f_btn">Call Us: 108</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="img/features/icon2.png" alt="">
+							<h4>Doctors Schedule</h4>
+						</div>
+						<div class="feature_content">
+							<p>Our Doctors have fixed schedules where you can get an appointment easily.</p>
+							<div class="feature_btn">
+								<a href="#" class="f_btn">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="img/features/icon3.png" alt="">
+							<h4>Online Appointment</h4>
+						</div>
+						<div class="feature_content">
+							<p>Here is the link to get a free appointment from our experts.</p>
+							<div class="feature_btn">
+								<a href="appointments.html" class="f_btn">Get Appointment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+    <!--================ Start footer Area  =================-->
+	<footer class="footer-area section-gap">
+			<div class="footer_top section_gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">About Us</h4>
+								<p>
+									Sahyog is our humble effort to make the world a better place. We strongly believe that health is wealth.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">Contact Us</h4>
+								<p>
+									You can contact us at the following number if you have any questions related to our website.
+								</p>
+								<p class="number">
+									+91 91929478845
+								</p>
+							</div>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						<p class="footer-text">
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | SAHYOG</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="https://www.facebook.com/Sahyog-634837963623499/" target = "_blank"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<!--================ End footer Area  =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="logged.js"></script>
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/5c7e637da726ff2eea5ab0be/default';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+		</script>
+</body>
+</body>
+
+</html>

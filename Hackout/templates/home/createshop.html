@@ -1,0 +1,47 @@
+{% extends 'home/homeheader.html' %}
+
+{% load static %}
+{% block head2 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/createshop.css' %}">
+{% endblock %}
+
+
+{% block body2 %}
+    <div class='container'>
+      <section class="features" id="register-sec">
+        <h1 style="text-align: center">Register with the GenMed-Project</h1>
+        <hr>
+        <form id="regForm" action={% url 'home:create_shop' %} method="POST">
+            {% csrf_token %}
+            <div class='parts'> <h3 class='tab-head'>Shop Info</h3> 
+              <p><input class='inp' placeholder="Shop Name..."  name="shop_name"></p>
+              <p><input class='inp' placeholder="Owner Name..."  name="owner_name"></p>
+              <p><input class='inp' placeholder="Mob No..."  name="mob_no"></p>
+              <p><input class='inp' placeholder="Alt No..."  name="alt_no"></p>
+            </div>
+            <div class="parts"> <h3 class='tab-head'>License Detail</h3> 
+              <p><input class='inp' placeholder="License..."  name="license"></p>
+              <p><input class='inp' placeholder="Drug License..."  name="drug_license"></p>
+              <p><input class='inp' placeholder="Drug License Type..."  name="drug_license_type"></p>
+            </div>
+            <div class="parts"> <h3 class='tab-head'>Pharmacist Detail</h3> 
+              <p><input class='inp' placeholder="Name..."  name="ph_name"></p>
+              <p><input class='inp' placeholder="Degree..."  name="ph_deg"></p>
+              <p><input class='inp' placeholder="College..."  name="ph_college"></p>
+            </div>
+            <div class="parts"> <h3 class='tab-head'>Address</h3>
+                <p><input class='inp' placeholder="City..."  name="city"></p>
+                <p><input class='inp' placeholder="District..."  name="district"></p>
+                <p><input class='inp' placeholder="State..."  name="state"></p>
+                <p><input type="text" name="lat" id="lat" placeholder="Latitude...">
+                   <input type="text" name="lon" id="lon" placeholder="Longitude...">
+                   <input type="button" class='inp' id='locBtn' onclick=getLocation() value='Fetch Location'></p>
+            </div>
+            <p id='bt'><input class='inp' type="submit" value="Submit" name='submit_btn' id="subBtn"></p>
+          </form>
+    </section>
+    </div>
+          
+          <script src="{% static 'home/createshop.js' %}"></script>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+{% endblock %}

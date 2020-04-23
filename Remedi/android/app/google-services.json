@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "864062996277",
+    "firebase_url": "https://remedi-a48e0.firebaseio.com",
+    "project_id": "remedi-a48e0",
+    "storage_bucket": "remedi-a48e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864062996277:android:df22ebedafef81e5",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864062996277-rltmkr3ovd7acojgjhrs5b70brlgkcpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapp",
+            "certificate_hash": "b1aec8ddf6b38d60d1658581d09459fd21c832e7"
+          }
+        },
+        {
+          "client_id": "864062996277-h230l2nr4h7rt8pfm3hqn4pv7eeuo54j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWE2yKMf4K8WmoV3t0ZstZWnISADJk1tM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864062996277-h230l2nr4h7rt8pfm3hqn4pv7eeuo54j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

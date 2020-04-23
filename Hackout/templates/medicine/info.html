@@ -1,0 +1,49 @@
+{% extends 'medicine/medheader.html' %}
+
+{% load static %}
+{% block head_2 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'medicine/info.css' %}">
+{% endblock %}
+
+{% block body_2 %}
+
+    <section id="search-result">
+    {% if gen_name %}
+        <h1>{{ gen_name }}</h1>
+        <hr>
+        <h4>General Names</h4>
+
+        <table class="col-lg-10">
+            <tr>
+                <th class="col1"> Drug Name</th>
+                <th class="col2"> Company Name  </th>
+            </tr>
+            {% for row in common_name %}
+                <tr>
+                    {% for col in row %}
+                        <td class="col{{ forloop.counter }}">{{ col }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            {% if user.is_authenticated %}
+                <tr id='addrow'>
+                    <form action="{% url 'medicine:info' %}" method="post" id='add'>
+                        {% csrf_token %}
+                        <td><input type="text" placeholder="Drug Name..." id="" name='custom_name'></td>
+                        <td><input type="text" placeholder="Company Name..." id="" name='company_name'></td>
+                        <input type="hidden" name="gen_name" value="{{ gen_name }}">
+                    </form>
+                </tr>
+            {% endif %}
+        </table>
+        {% if user.is_authenticated %}
+            <button onclick=addField() id='addBtn' class='inp' >Add Field</button>
+            <button id='subBtn' class='inp' onclick=addName()>Add</button>
+            <button id='cancelBtn' class='inp' onclick=cancelAdd()>Cancel</button>
+        {% endif %}
+    {% endif %}
+    </section>
+
+    <script src="{% static 'medicine/info.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+{% endblock %}

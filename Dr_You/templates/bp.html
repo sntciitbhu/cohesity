@@ -1,0 +1,44 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Sugar Level
+{% endblock %}
+
+{% block head %}
+
+<br><br><br><br><br>
+
+<style>
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+
+    .dfuck
+    {
+      position: absolute;
+      margin: auto;
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+</style>
+<img class="displayed" src="{{ image }}" alt="Blood Pressure graph over time"/>
+
+<center>
+<div style="padding-top: 25px;" >
+    <h2 >Enter Your Measured Systolic and Diastolic Blood Pressure</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+{% if not user.is_authenticated %}
+    <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+</center>
+
+{% endblock %}

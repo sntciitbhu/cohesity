@@ -1,0 +1,15 @@
+.para h1, .para p {
+	color: #676a6c;
+	font-family: 'Fira Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+.para h1 {
+	text-align: center;
+	font-size: 2.2rem;
+}
+
+.para p {
+	text-align: justify;
+	margin-bottom: 80px;
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+    http://www.springframework.org/schema/context  
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
+
+<context:component-scan base-package="com.project.controllers"></context:component-scan>
+
+<mvc:resources mapping="/resources/**" location="/resources/theme1/"  cache-period="31556926"/>
+
+<mvc:annotation-driven />
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/jsp/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>  
+<property name="url" value="jdbc:mysql://localhost:3306/dbms_medical_2?useSSL=false"></property>  
+<property name="username" value="root"></property>  
+<property name="password" value="root"></property>  
+</bean>  
+
+<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+<property name="dataSource" ref="dataSource"></property>
+</bean>
+
+
+
+<bean id="MSBdao" class="com.project.dao.MSBDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Workerdao" class="com.project.dao.WorkerDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Customerdao" class="com.project.dao.CustomerDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Doctordao" class="com.project.dao.DoctorDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Providerdao" class="com.project.dao.ProviderDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Bankdao" class="com.project.dao.BankDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Userdao" class="com.project.dao.usersDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Roledao" class="com.project.dao.roleDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Productdao" class="com.project.dao.ProductDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Caegorydao" class="com.project.dao.CategoryDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Stockdao" class="com.project.dao.StockDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Stdao" class="com.project.dao.StDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Solddao" class="com.project.dao.SoldDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Btdao" class="com.project.dao.BtDao">
+<property name="template" ref="jt"></property>
+</bean>
+
+<bean id="Boughtdao" class="com.project.dao.BoughtDao">
+<property name="template" ref="jt"></property>
+</bean>
+</beans>

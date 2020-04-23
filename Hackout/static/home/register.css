@@ -1,0 +1,70 @@
+/* Section-styling */
+#register-sec {
+    color: #676a6c;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#register-sec>h1 {
+    color: #676a6c;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#register-sec>hr{
+    height: 1px;
+    background: #333; 
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+/* Style the form */
+#regForm {
+    margin: 20px auto;
+    padding: 40px;
+    padding-top: 0;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'Fira Sans', sans-serif;
+  border: 1px solid #aaaaaa;
+  border-radius: 50px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none; 
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+#subBtn {
+  background: linear-gradient( 135deg, #0c2646 0%, #204065 60%, #2a5788 100%);
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 50px;
+  width: 200px;
+}
+
+#bt{
+  text-align: center;
+}
