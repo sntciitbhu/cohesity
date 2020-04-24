@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Acme"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Almendra+SC"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron" style="color: #fca311;">
+      <h1 style="font-family: 'Almendra SC', serif;">Library</h1>
+      <p style="font-family: 'Abril Fatface', cursive; text-align: center;">
+        Help me out in setting up an amazing set of books that we can spend our
+        leisure time with .
+      </p>
+    </div>
+    <div class="container" id="books">
+      <div>
+        <a
+          class="btn btn-dark text-monospace text-capitalize text-center"
+          data-toggle="collapse"
+          aria-expanded="false"
+          aria-controls="collapse-1"
+          href="#collapse-1"
+          role="button"
+          data-aos="fade"
+          style="margin-right: 0px; margin-left: 0px; margin-bottom: 15px;"
+          >Add Book</a
+        >
+        <div class="collapse" id="collapse-1">
+          <form id="bookForm">
+            <label>Name of Book</label
+            ><input class="form-control" type="text" id="name" required />
+            <label>Author</label
+            ><input class="form-control" type="text" id="author" required />
+            <label>Genre</label
+            ><select class="form-control" id="pages">
+              <option>Fiction</option>
+              <option>NonFiction</option>
+              <option>Mystery</option>
+              <option>SelfHelp</option>
+              <option>Biography</option>
+              <option>Fantasy</option>
+              <option>Manga</option>
+              <option>Poetry</option>
+              <option>Spirituality</option>
+            </select>
+            <label>Read By: </label
+            ><input
+              class="form-control"
+              type="text"
+              id="formCheck-1"
+              required
+            />
+            <button
+              class="btn btn-primary text-monospace text-capitalize text-center"
+              type="submit"
+            >
+              Submit
+            </button>
+            <div class="alert alert-danger" role="alert">
+              Fiction is a genre of books not a type :( Please enter a valid
+              book.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">Fiction</h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-1">
+        <div class="carousel-inner" role="listbox" id="Fiction">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/EZJa80S.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-1"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-1"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">Manga</h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-2">
+        <div class="carousel-inner" role="listbox" id="Manga">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/manga.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-2"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-2"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">
+        Biography
+      </h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-3">
+        <div class="carousel-inner" role="listbox" id="Biography">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/biography.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-3"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-3"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">
+        Non-Fiction
+      </h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-4">
+        <div class="carousel-inner" role="listbox" id="NonFiction">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/non-fiction.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-4"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-4"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">
+        Self-Help
+      </h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-5">
+        <div class="carousel-inner" role="listbox" id="SelfHelp">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/self help.jpeg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-5"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-5"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">Mystery</h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-6">
+        <div class="carousel-inner" role="listbox" id="Mystery">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/mystery.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-6"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-6"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">Fantasy</h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-7">
+        <div class="carousel-inner" role="listbox" id="Fantasy">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/fantasy.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-7"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-7"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">Poetry</h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-8">
+        <div class="carousel-inner" role="listbox" id="Poetry">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/poetry.jpeg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-8"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-8"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center; display: block; color: azure;">
+        Spirituality
+      </h4>
+      <div class="carousel slide" data-ride="carousel" id="carousel-9">
+        <div class="carousel-inner" role="listbox" id="Spirituality">
+          <div class="carousel-item active">
+            <p class="img"><img src="./assets/css/Spirituality.jpg" /></p>
+          </div>
+        </div>
+        <div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel-9"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-9"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="https://github.com/king-11"
+            ><i class="icon ion-social-github"></i
+          ></a>
+          <a href="https://www.instagram.com/x_tegrat/"
+            ><i class="icon ion-social-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/lakshyasingh11/"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://www.facebook.com/Lord11002"
+            ><i class="icon ion-social-facebook"></i></i
+          ></a>
+        </div>
+        <p class="copyright">Lakshya Singh © 2020</p>
+      </footer>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="assets/js/script.min.js"></script>
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal(".jumbotron", {
+        duration: 2000,
+        origin: "bottom",
+        distance: "100px",
+      });
+      sr.reveal(".container", {
+        duration: 2000,
+        delay: 1000,
+        origin: "bottom",
+        viewFactor: 0.5,
+      });
+    </script>
+  </body>
+</html>

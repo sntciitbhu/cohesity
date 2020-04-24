@@ -1,0 +1,40 @@
+{% extends '../base.html' %}
+
+
+{% block banner %} main-banner inner {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row p-5"; style="font-size: 25px">
+        NEAREST STATION & CONTACT (ACCORDING TO YOUR LOCATION):
+    </div>
+    <table class="table">
+    <tbody>
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>{{station.station_name}} ({{station.station_code}})</b></td>
+        </tr>
+        <tr>
+            <td>Station Manager</td>
+            <td>{{station.manager}}</td>
+        </tr>
+            <td>Assistant Manager</td>
+            <td>{{station.assistant_manager}}</td>
+        </tr>
+            <td>RPF</td>
+            <td>{{station.rpf}}</td>
+        </tr>
+        <tr>
+            <td>Deputy RPF</td>
+            <td>{{station.deputy_rpf}}</td>
+        </tr>
+        <tr>
+            <td>Head Officer</td>
+            <td>{{station.head_officer}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+{% endblock %}

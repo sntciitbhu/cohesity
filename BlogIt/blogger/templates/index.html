@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Blogit - Home
+{% endblock title %}
+
+{% block content %}
+<div class="wrap">
+
+  {% include 'header.html' %}
+
+  <section class="site-section pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="owl-carousel owl-theme home-slider">
+            {% for blog in top_three %}
+            <div>
+              <a href="/blog/{{ blog.id }}/" class="a-block d-flex align-items-center height-lg"
+                style="background-image: url('{{ blog.image }}'); ">
+                <div class="text half-to-full">
+                  <span class="category mb-5">{{ blog.tag }}</span>
+                  <div class="post-meta">
+
+                    <span class="author mr-2">{{ blog.author.first_name }} {{ blog.author.last_name }}</span>&bullet;
+                    <span class="mr-2">{{ blog.date_created }}
+                  </div>
+                  <h3>{{ blog.title }}</h3>
+                  <p>{{ blog.description }}</p>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+  <!-- END section -->
+
+  <section class="site-section py-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="mb-4">Latest Posts</h2>
+        </div>
+      </div>
+      <div class="row blog-entries">
+        <div class="col-md-12 col-lg-8 main-content">
+          <div class="row">
+            {% for blog in blogs %}
+            <div class="col-md-6">
+              <a href="/blog/{{ blog.id }}/" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                <img src="{{ blog.image }}" alt="Image placeholder">
+                <div class="blog-content-body">
+                  <div class="post-meta">
+                    <span class="author mr-2">{{ blog.author.first_name }} {{ blog.author.last_name }} </span>&bullet;
+                    <span class="mr-2">{{ blog.date_created }} </span>
+                  </div>
+                  <h2>{{ blog.title }}</h2>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {% include 'sidebar.html' %}
+
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+</div>
+
+{% include 'scripts.html' %}
+
+{% endblock content %}

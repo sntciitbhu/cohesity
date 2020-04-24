@@ -1,0 +1,128 @@
+{% extends '../base.html' %}
+{% load train %}
+
+{% block title %} My Transactions {% endblock %}
+{% block navbar-transactions %}class="active"{% endblock %}
+{% block navbar-booked-history %}class="inactive"{% endblock %}
+{% block navbar-cancellation-history %}class="inactive"{% endblock %}
+
+{% block banner %} main-banner inner {% endblock %}
+{% load static %}
+{% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'transactions' %}">My Transactions</a></li>
+    <li class="breadcrumb-item active">Last Transaction Detail</li>
+</ol>
+
+<div class="section text-center py-5">
+    <div class="container" style="padding-left: 10%; padding-right: 10%; padding-bottom: 1%;">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="message">
+        <div class="alert alert-{{message.tags}} alert-dismissible text-center" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$('.alert').remove()">&times;</button>
+            {{message}}
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    </div>
+</div>
+
+{% if found %}
+<!-- ticket booking form -->
+<div class="section text-center py-5">
+    <div class="container" style="padding-left: 10%; padding-right: 10%; padding-bottom: 1%;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <table class="table table-sm col-md-4">
+                <thead class="thead-blue">
+                    <tr>
+                    <th style="width:50%">Transaction ID</th>
+                    <th style="width:50%">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>{{ ticket.transaction_id }}</td>
+                    <td>Booked</td>
+                    </tr>
+                    <tr><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row shadow mb-5 rounded" style="border: 1px solid #ffffed; padding:2%; background-color:#ffffed;">
+            <div class="col-md-4" align="left">
+                <span>{{ train.train_no|get_full_train_name }}</span><br>
+                <p style="margin:0px">{{ ticket.journey_date }}</p>
+                <p>{{ schedule_source.arrival }}</p>
+                <p  style="margin:0px;"> {{ schedule_source.station_id|get_full_station_name }}</p>
+                <p  style="margin:0px"> ({{ schedule_source.station_id }})</p>
+            </div>
+            <div class="col-md-4" align="center">
+                <br><br>
+                <table>
+                    <tr>
+                        <td style='width:200px;'><hr color="darkgrey"></td>
+                        <td> {{ travel_time }}</td>
+                        <td style='width:200px'><hr color="darkgrey"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4"align="right">
+                <span>PNR: <b>{{ ticket.pnr }}</b></span>
+                <p style="margin:0px">{{ arrival_date }}</p>
+                <p>{{ schedule_destination.arrival }}</p>
+                <p style="margin:0px"> {{ schedule_destination.station_id|get_full_station_name }}</p>
+                <p style="margin:0px"> ({{ schedule_destination.station_id }})</p>
+            </div>
+            <div class="col-md-12">
+                <label>Total Fare: <b>&#8377; {{ ticket.amount }}</b></label>&nbsp;|&nbsp;
+                <label>Date of Booking: <b>{{ ticket.transaction_date }}</b></label>&nbsp;|&nbsp;
+                <label>Class: <b>{{ ticket.class_type }}</b></label>&nbsp;|&nbsp;
+                <label>Quota: <b>GEN</b></label>
+            </div>
+        </div>
+        <div align="left" style="padding-top:2%">
+            <label><b>PASSENGER(S) DETAILS</b></label>
+        </div>
+        {% for passenger in passengers %}
+        <div class="row shadow p-3 mb-3 bg-white rounded" style="border: 1px solid whitesmoke;">
+            <div class="col-md-1" align="left">
+                <label>{{ forloop.counter }}.</label>
+            </div>
+            <div class="col-md-3">
+                <label>{{ passenger.name }}</label>
+            </div>
+            <div class="col-md-2">
+                <label>{{ passenger.age }} Y</label>
+            </div>
+            <div class="col-md-2">
+                <label>{{ passenger.gender|get_full_gender }}</label>
+            </div>
+            <div class="col-md-4">
+                <label>CNF/{{ ticket.class_type }}/{{ passenger.seat_no }}/{{ passenger|get_berth }}/GN</label>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--//ticket booking form ends here-->
+{% endif %}
+{% endblock %}
+
+{% block script %}
+
+{% if messages %}
+{% for message in messages %}
+    window.setTimeout(function () {
+        $(".alert-{{message.tags}}").fadeTo(1000, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 2000);
+{% endfor %}
+{% endif %}
+
+{% endblock %}

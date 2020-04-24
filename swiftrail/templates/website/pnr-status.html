@@ -1,0 +1,161 @@
+{% extends '../base.html' %}
+{% load train %}
+
+{% block title %} PNR Status {% endblock %}
+{% block navbar-pnr-status %}class="active"{% endblock %}
+
+{% block banner %} main-banner inner {% endblock %}
+
+{% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item active">PNR Status</li>
+</ol>
+
+<!-- pnr status form -->
+<div class="section text-center py-5">
+    <div class="container">
+        <div style="margin-top:30px;" class="mainbox ">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <form id="pnr-form" class="form-horizontal" action="" method="post">
+                        {% csrf_token %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="message">
+                            <div class="alert alert-{{message.tags}} alert-dismissible text-center" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$('.alert').remove()">&times;</button>
+                                {{message}}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        <div class="form-group">
+                            <div class="container">
+                                <div class="row">
+                                    <label class="col-md-4 col-sm-4 col-xs-4 control-label pr-5"><b>PNR Number:</b></label>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <input type="text" class="form-control" name="pnr" placeholder="Enter PNR Number" required="" value="{% if pnr %}{{ pnr }}{% endif %}">
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="col-md-4 col-sm-4 col-xs-4 controls">
+                                        <button type="submit" id="btn-pnr" class="btn active float-left">Get Status</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% if is_submit %}
+            <div class="panel panel-info" style="border: 1px solid black">
+                <div class="panel-heading">
+                    <div class="panel-title">PNR Status</div>
+                </div>
+                <div style="padding-top:30px" class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mr-2">
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>PNR Number</th>
+                                        <td>{{ ticket.pnr }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Train Number</th>
+                                        <td>{{ ticket.train_no }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>From Station</th>
+                                        <td>{{ ticket.ticket_from_id }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Class</th>
+                                        <td>{{ ticket.class_type }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ticket Fare</th>
+                                        <td>&#8377; {{ ticket.amount }}</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ml-2">
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>Date of Journey</th>
+                                        <td>{{ ticket.journey_date }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <td>{{ ticket.train_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>To Station</th>
+                                        <td>{{ ticket.ticket_to_id }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>No. of Passengers</th>
+                                        <td>{{ passengers|count }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Quota</th>
+                                        <td>General (GEN)</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-center mt-5" style="text-align: center; font-size: 1.1rem">
+                            <b>PASSENGER DETAILS</b>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>S. No.</th>
+                                            <th>Age</th>
+                                            <th>Booking Status (Class, Berth No, Quota)</th>
+                                            <th>Current Status (Class, Berth No, Quota</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for passenger in passengers %}
+                                        <tr>
+                                            <td>Passenger {{ forloop.counter }}</td>
+                                            <td>{{ passenger.age }}</td>
+                                            <td>CNF/{{ ticket.class_type }}/{{ passenger.seat_no }}/{{ passenger|get_berth }}/GN</td>
+                                            <td>CNF/{{ ticket.class_type }}/{{ passenger.seat_no }}/{{ passenger|get_berth }}/GN</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!--//pnr status form ends here-->
+{% endblock %}
+
+{% block script %}
+
+{% if messages %}
+{% for message in messages %}
+    window.setTimeout(function () {
+        $(".alert-{{message.tags}}").fadeTo(1000, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 2000);
+{% endfor %}
+{% endif %}
+
+{% endblock %}

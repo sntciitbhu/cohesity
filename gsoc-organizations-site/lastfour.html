@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<div class="home container">
+
+    <div class="page-heading">
+        <ul class="collapsible popout" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header favo"><i class="mdi mdi-weather-windy-variant"></i>These are the organizations which appeared last four years in GSOC<i class="mdi mdi-pin right pink-text hide-on-small-only"></i></div>
+          </li>
+        </ul>
+      </div>
+      {% for org in site.data.last_four_years %}
+      {% assign remainder = forloop.index | modulo: 3 %}
+      {% if remainder == 1 %} 
+      <div class="row">
+          <div class="col s12 m12 l4">
+            <div class="card blue-grey darken-1" style="height: 200px;">
+              <!-- <div class="card-image">
+                <img src="{{ org.image }}" style="height: 100%; width: 100%;" >
+              </div> -->
+              <div class="card-content white-text">
+                <p>{{ org.name }}</p>
+              </div>
+              <div class="card-action">
+                {% if org.gsoc.2019 %}
+                <a href="{{ org.gsoc.2019 }}" target="_blank">GSOC 2019</a>
+                {% endif %}
+                {% if org.gsoc.2018 %}
+                <a href="{{ org.gsoc.2018 }}" target="_blank">GSOC 2018</a>
+                {% endif %}
+                {% if org.gsoc.2017 %}
+                <a href="{{ org.gsoc.2017 }}" target="_blank">GSOC 2017</a>
+                {% endif %}
+                {% if org.gsoc.2016 %}
+                <a href="{{ org.gsoc.2016 }}" target="_blank">GSOC 2016</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+      {% elsif remainder == 2  %}
+      <div class="col s12 m6 l4">
+          <div class="card blue-grey darken-1" style="height: 200px;">
+              <!-- <div class="card-image">
+                <img src="{{ org.image }}" style="height: 100%; width: 100%;" >
+              </div> -->
+              <div class="card-content white-text">
+                <p>{{ org.name }}</p>
+              </div>
+              <div class="card-action">
+                {% if org.gsoc.2019 %}
+                <a href="{{ org.gsoc.2019 }}" target="_blank">GSOC 2019</a>
+                {% endif %}
+                {% if org.gsoc.2018 %}
+                <a href="{{ org.gsoc.2018 }}" target="_blank">GSOC 2018</a>
+                {% endif %}
+                {% if org.gsoc.2017 %}
+                <a href="{{ org.gsoc.2017 }}" target="_blank">GSOC 2017</a>
+                {% endif %}
+                {% if org.gsoc.2016 %}
+                <a href="{{ org.gsoc.2016 }}" target="_blank">GSOC 2016</a>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+      {% else %}
+      <div class="col s12 m6 l4">
+          <div class="card blue-grey darken-1" style="height: 200px;">
+              <!-- <div class="card-image">
+                <img src="{{ org.image }}" style="height: 100%; width: 100%;" >
+              </div> -->
+              <div class="card-content white-text">
+                <p>{{ org.name }}</p>
+              </div>
+              <div class="card-action ">
+                {% if org.gsoc.2019 %}
+                <a href="{{ org.gsoc.2019 }}" target="_blank">GSOC 2019</a>
+                {% endif %}
+                {% if org.gsoc.2018 %}
+                <a href="{{ org.gsoc.2018 }}" target="_blank">GSOC 2018</a>
+                {% endif %}
+                {% if org.gsoc.2017 %}
+                <a href="{{ org.gsoc.2017 }}" target="_blank">GSOC 2017</a>
+                {% endif %}
+                {% if org.gsoc.2016 %}
+                <a href="{{ org.gsoc.2016 }}" target="_blank">GSOC 2016</a>
+                {% endif %}
+              </div>
+              </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}  
+</div>

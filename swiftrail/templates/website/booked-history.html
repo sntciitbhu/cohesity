@@ -1,0 +1,180 @@
+{% extends '../base.html' %}
+{% load train %}
+
+{% block title %} My Transactions {% endblock %}
+{% block navbar-transactions %}class="active"{% endblock %}
+{% block navbar-last-transaction %}class="inactive"{% endblock %}
+{% block navbar-cancellation-history %}class="inactive"{% endblock %}
+
+{% block banner %} main-banner inner {% endblock %}
+
+{% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'transactions' %}">My Transactions</a></li>
+    <li class="breadcrumb-item active">Booked Ticket History</li>
+</ol>
+
+{% for t in all_tickets %}
+<div class="container">
+    <div class="row shadow p-3 mb-5 bg-white rounded" style="border: 1px solid whitesmoke; font-size:16px; padding:2%;">
+        <div class=col-md-2>
+            <div class="col-md-12" style="font-size:18px">
+                <!-- Weekday -->
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="font-size:35px">
+                    <!-- 02 -->
+                </div>
+                <div class="col-md-8" style="font-size:18px">
+                    <!-- Oct <br>2019 -->
+                </div>
+            </div>
+            <div class="col-md-12" style="font-size:25px; color:#228B22; transform: rotate(-5deg);">
+                <b>Booked</b>
+            </div>
+        </div>
+        <div class="col-md-10" style="font-size:15px">
+            <div class="row">
+                <div class="col-md-5">PNR Number: &nbsp;
+                <span><b>{{ t.ticket.pnr }}</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">Transaction ID: &nbsp;
+                <span><b>{{ t.ticket.transaction_id }}</b></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Train Number/Name: &nbsp;
+                <span><b>{{ t.train.train_no }} / {{ t.train.train_no|get_full_train_name }}</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">Booking Date: &nbsp;
+                <span><b>{{ t.ticket.transaction_date }}</b></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">From: &nbsp;
+                <span><b>{{ t.schedule_source.station_id|get_full_station_name }} ({{ t.schedule_source.station_id }}), {{ t.journey_date }}, {{ t.schedule_source.arrival }}</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">To: &nbsp;
+                <span><b>{{ t.schedule_destination.station_id|get_full_station_name }} ({{ t.schedule_destination.station_id }}), {{ t.arrival_date }}, {{ t.schedule_destination.arrival }}</b></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Boarding Station: &nbsp;
+                <span><b>{{ t.schedule_source.station_id|get_full_station_name }} ({{ t.schedule_source.station_id }})</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">Date Of Boarding: &nbsp;
+                <span><b>{{ t.ticket.journey_date }}, {{ t.schedule_source.arrival }}</b></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Class: &nbsp;
+                <span><b>{{ t.ticket.class_type }}</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">Total Fare: &nbsp;
+                <span><b>&#8377; {{ t.ticket.amount }}</b></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Quota: &nbsp;
+                <span><b>GEN</b></span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">Ticket Type: &nbsp;
+                <span><b>E-Ticket</b></span>
+                </div>
+            </div>
+            <br>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Booking Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for passenger in t.passengers %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ passenger.name }}</td>
+                        <td>{{ passenger.age }} Y</td>
+                        <td>{{ passenger.gender|get_full_gender }}</td>
+                        <td>CNF/{{ ticket.class_type }}/{{ passenger.seat_no }}/{{ passenger|get_berth }}/GN    </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td align="right" style="width:50%;"><button type="button" class="btn btn-primary btn-sm" data-target="#cancelTicket_modal-{{t.ticket.pnr}}" data-toggle="modal">Cancel Ticket</button></td>
+                    <!-- <td align="left"><button type="button" class="btn btn-primary btn-sm">Print E-Ticket</button></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="cancelTicket_modal-{{t.ticket.pnr}}" tabindex="-1" role="dialog" aria-labelledby="cancelTicketTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6>Cancel Ticket<span class="extra-title muted"></span></h6>
+            </div>
+            <div class="modal-body form-horizontal" style="padding:0">
+                <!-- <div class="container" style="padding-left:5%; padding-right:5%">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Booking Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>A Kumar</td>
+                                <td>19</td>
+                                <td>Male</td>
+                                <td>CNF/B1/14/UB/GN</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sachin</td>
+                                <td>20</td>
+                                <td>Male</td>
+                                <td>CNF/B1/14/UB/GN</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div> -->
+                <div class="container" style="padding-left:5%; padding-right:5%">
+                    <div class="row">
+                        <br>
+                        Are you sure to cancel this ticket?
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'ticket-cancel-page' t.ticket.pnr %}" class="btn btn-primary">Cancel Ticket</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,150 @@
+.h1,
+h1 {
+  text-align: center;
+  font-size: xxx-large;
+  color: #000;
+}
+
+.jumbotron > p {
+  color: #000;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.jumbotron {
+  background: none;
+}
+
+form > button {
+  margin: 1rem auto;
+}
+
+form > label {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+form > label:first-child {
+  margin-top: 0rem !important;
+}
+
+.form-check {
+  margin-top: 1rem;
+}
+
+body {
+  background: burlywood;
+}
+
+.form-control {
+  max-width: 75%;
+}
+
+.collapse.show {
+  margin-top: 1rem;
+}
+
+li > button {
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+img {
+  max-height: 150px;
+  border-radius: 0.25rem;
+  width: 60%;
+}
+
+.img {
+  display: block;
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #f1f1f1;
+}
+
+.collapse {
+  transition: all 1000ms;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.alert {
+  display: none;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s linear;
+}
+
+.anime {
+  opacity: 1;
+}
+
+@media screen and (min-width: 720px) {
+  .grid .btn {
+    max-width: 350px;
+  }
+}
+
+.footer-basic {
+  padding: 20px 0;
+  background-color: #fff;
+  color: #4b4c4d;
+}
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.footer-basic li {
+  padding: 0 10px;
+}
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 6px;
+  color: inherit;
+  opacity: 0.75;
+}
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+.footer-basic .copyright {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.footer-basic ion-icon {
+  margin: -3px;
+  overflow: visible;
+}

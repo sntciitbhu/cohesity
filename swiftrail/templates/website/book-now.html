@@ -1,0 +1,99 @@
+{% extends '../base.html' %}
+{% load train %}
+
+{% block title %} Ticket Booking {% endblock %}
+{% block navbar-book-ticket %}class="active"{% endblock %}
+
+{% block banner %} main-banner inner {% endblock %}
+
+{% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'book-ticket' %}">Book Ticket</a></li>
+    <li class="breadcrumb-item active">Book Now</li>
+</ol>
+<div class="section text-center py-5">
+    <form class="form-horizontal" action="" method="POST">
+    {% csrf_token %}
+    <div class="container" style="padding-left: 10%; padding-right: 10%; padding-bottom: 1%">
+        <div class="row shadow mb-2 rounded" style="border: 1px solid #ffffed; padding:2%; background-color:#ffffed;">
+            <div class="col-md-4" align="left">
+                <span>{{ train.train_name }}</span>
+                <p>{{ schedule_source.arrival }}</p>
+                <p  style="margin:0px;">{{ source|get_full_station_name }}</p>
+                <p  style="margin:0px"> ({{ source }})</p>
+            </div>
+            <div class="col-md-4" align="center">
+                <p></p>
+                <table>
+                    <tr>
+                        <td style='width:200px;'><hr color="darkgrey"></td>
+                        <td> {{ travel_time }}</td>
+                        <td style='width:200px'><hr color="darkgrey"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4"align="right">
+                <span>{{ journey_date }}</span>
+                <p>{{ schedule_destination.arrival }}</p>
+                <p  style="margin:0px;">{{ destination|get_full_station_name }}</p>
+                <p  style="margin:0px"> ({{ destination }})</p>
+            </div>
+        </div>
+        <br>
+        <div align="left" style="padding-top:2%">
+            <label><b>PASSENGER(S) LIST</b></label>
+        </div>
+        <div class="row shadow p-3 mb-3 bg-white rounded" style="border: 1px solid whitesmoke;">
+            {% for i in n %}
+            <div class="row">
+                <div class="col-md-1 ml-5" align="left" style="padding-top:1%">
+                    <label>{{ forloop.counter }}.</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Name" name="name{{ forloop.counter }}">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Age" name="age{{ forloop.counter }}">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" name="gender{{ forloop.counter }}">
+                        <option selected disabled>Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Others/Not Specified</option>
+                    </select>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- <div class="row">
+            <button type="button" class="btn btn-link" style="padding:0; padding-top: 2%">+ Add Passenger</button>
+        </div> -->
+        <div class="form-group">
+            <div class="container">
+                <!-- <table align="center" cellpadding="10">
+                    <tr>
+                        <td align="right"><b>Boarding Station</b></td>
+                        <td><input type="text" class="form-control"placeholder="Enter Boarding Station" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>Mobile Number</b></td>
+                        <td><input type="text" class="form-control"placeholder="Enter Mobile Number" required></td>
+                    </tr>
+                </table> -->
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-md-4 col-sm-4 col-xs-4" align="right" style="font-size:17.5px">
+                        <a><b> Total Fare : &#8377; {{ fare }}</b></a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4" align="left"> 
+                        <button class="btn btn-sm active" type="submit">Proceed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock %}
