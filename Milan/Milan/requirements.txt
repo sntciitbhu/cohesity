@@ -5,7 +5,7 @@ django-bootstrap-form==3.4
 django-user-accounts==2.0.3
 gunicorn==19.8.1
 Markdown==2.6.11
-Pillow==5.1.0
+Pillow==9.0.0
 pinax-theme-bootstrap==8.0.1
 pybbm==0.19.0
 pytz==2018.4
